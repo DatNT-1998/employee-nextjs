@@ -9,6 +9,7 @@ import {
 import 'antd/dist/antd.css'
 import { useRouter } from 'next/router';
 
+import Link from 'next/link';
 
 const { Header, Content, Sider } = Layout;
 
@@ -33,10 +34,10 @@ function Dashboard({ children }) {
           <div className={styles.logo} />
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1" icon={<PieChartOutlined />}>
-              <span onClick={handleOnClick} > Employee </span>
+              <Link href="/employee"><a>Employee</a></Link>
             </Menu.Item>
             <Menu.Item key="2" icon={<PieChartOutlined />}>
-              {/* <Link to="profile">Profile</Link> */}
+
             </Menu.Item>
           </Menu>
         </Sider>
